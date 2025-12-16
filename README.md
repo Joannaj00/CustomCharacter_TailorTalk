@@ -1,7 +1,6 @@
 # TailorTalk – Character Chat Module
 
-This repository contains a minimal, self-contained version of the character conversation system I built for TailorTalk.  
-The app allows writers to create detailed character profiles and have real-time conversations with those characters, powered by GPT-3.5 Turbo. Character information is saved per session, and the system maintains consistent behavior across dialogue turns.
+This repository contains a minimal, self-contained version of the character conversation system I built for TailorTalk. The app allows writers to create detailed character profiles and have real-time conversations with those characters, powered by GPT-3.5 Turbo. Character information is saved per session, and the system maintains consistent behavior across dialogue turns.
 
 ## Demo Video
 
