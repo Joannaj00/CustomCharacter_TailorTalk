@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tailor Talk</title>
+<link rel="stylesheet" type="text/css" href="../static/css/custom_chat_style.css">
+<link rel="stylesheet" href="../static/css/global.css">
+
+</head>
+<body>
+
+<div>
+    <h1 class="shadow-sm">TAILOR TALK</h1> 
+    <nav>
+        <ul>
+            <!-- <a href="/text_editor" target="_blank">Text Editor</a> -->
+            <a href="/custom_chat">Customized Character Conversation</a>
+            <a href="/img2txt"  target="_blank">Image to Description</a>
+            <a href="/outline_gen"  target="_blank">Reverse Outline</a>
+            <a href="/info_syn"  target="_blank">Background Info Collector</a>
+        </ul>
+    </nav>
+</div>
+
+
+<!-- Instructions Section -->
+<div id="instructions">
+    <h2>
+        <em>Customized Character Conversation</em> 
+        <img src="../static/images/tt_logo.png" alt="Image Description">
+    </h2>
+
+    <div class="steps">
+        <p><span class="step-number">1.</span>Enter personal information about your character</p>
+        <p><span class="step-number">2.</span>Get inspired by chatting with you character</p>
+        <p><span class="step-number">3.</span>Modify personal information of your character if needed </p>
+
+    </div>
+</div>
+
+
+<div id="container">
+    <h2>Personal Information Form</h2>
+
+    <form id="personal-info-form">
+        <label for="image">Upload a Image:</label>
+        <img id="uploaded-image" src="#" alt=""> 
+        <br>
+        <input type="file" id="image" name="image" accept="image/jpeg">
+        <br>
+        <br>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="job">Job:</label>
+        <input type="text" id="job" name="job" required>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        
+        <label for="family-status">Family:</label>
+        <select id="family" name="family-status" required>
+            <option value="" selected disabled>Select Family Status</option>
+            <option value="married">Married</option>
+            <option value="single">Single</option>
+            <option value="divored">Divored</option>
+            <option values="widowed">Widowed</option>
+        </select>
+
+        <label for="relationship">Relationships:</label>
+        <textarea id="relationship" name="relationship" required></textarea>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        
+        <label for="sex">Gender:</label>
+        <select id="sex" name="sex" required>
+            <option value="" selected disabled>Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <div class="slider-container">
+            <label for="introvert-extrovert" class="slider-label">Extrovert Level:</label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="introvert-extrovert">
+            <div class="slider-popup" id="introvert-extrovert-popup">50</div>
+        </div>
+        
+        <div class="slider-container">
+            <label for="tech-averse-tech-savvy" class="slider-label">Nerdy Level:</label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="tech-averse-tech-savvy">
+            <div class="slider-popup" id="tech-averse-tech-savvy-popup">50</div>
+        </div>
+        
+        <div class="slider-container">
+            <label for="self-centered-empathetic" class="slider-label">Self-Centered Level:</label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="self-centered-empathetic">
+            <div class="slider-popup" id="self-centered-empathetic-popup">50</div>
+        </div>
+        
+        <div class="slider-container">
+            <label for="loyal-fickle" class="slider-label">Loyal Level:</label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="loyal-fickle">
+            <div class="slider-popup" id="loyal-fickle-popup">50</div>
+        </div>
+        
+        <div class="slider-container">
+            <label for="skeptic-trustful" class="slider-label">Trustful Level:</label>
+            <input type="range" min="0" max="100" value="50" class="slider" id="skeptic-trustful">
+            <div class="slider-popup" id="skeptic-trustful-popup">50</div>
+        </div>
+
+        <label for="additional-characteristics">Additional Characteristics:</label>
+        <textarea id="additional-characteristics" name="additional-characteristics"></textarea>
+
+        
+        <label for="additional-files">Additional Files about this character:</label>
+        <input type="file" id="additional-files" name="additional-files" multiple>
+        <br>
+        <br>
+        <div class="buttonCont">
+            <button id="myButton">Submit</button>
+        </div>
+    </form>
+</div>
+
+<div id="conversation" class="conversation"></div>
+<div id="user-input">
+    <input type="text" id="user-message" placeholder="Type your message..."  rows="4">
+    <button id="submit-message">Send</button>
+</div>
+
+<div id="survey-footer">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlEM6YeVU_oLD2S8tWPQVBycFADPt8kygeWDCli2_J2soqCg/viewform" target="_blank" class="survey-button">Take Survey</a>
+</div>
+
+<script src="../static/js/custom_chat_js.js" type="module"></script>
+
+
+</body>
+</html>
