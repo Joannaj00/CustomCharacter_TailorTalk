@@ -1,0 +1,7 @@
+gunicorn==22.0.0
+Flask==2.2.5
+boto3==1.34.98
+openai==0.28.1
+flask-sqlalchemy
+pandas==2.1.1
+psycopg2
